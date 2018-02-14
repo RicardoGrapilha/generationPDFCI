@@ -4,9 +4,13 @@ Hello, this project serves to generate a PDF using the CodeIgniter framework and
 
 # Project Settings
 Real Estate Management
+
 Assets/plugins/mpdf  `main library`
+
 assets/fonts/ `where the fonts are`
+
 application/libraries/PdfGenerator `it calls MPDF with its settings.`
+
    Inside it has a `generateMPDF ($ html = '', $ filename = '', $ title = '')` function where you pass the HTML, File name and Title that will appear on the page as parameters.
 
 ```php
@@ -21,9 +25,8 @@ public function index ()
 	$this->pdfgenerator->generateMPDF($ html, "my_pdf_for_download", 'Title Good PDF');
 }
 ```
+# Library
 ```php
-<?php
-
 class PdfGenerator
 {
 	public function generateMPDF($html='',$filename='', $title='')
